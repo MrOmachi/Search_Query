@@ -1,26 +1,24 @@
 <h1> <%= pluralize(@posts.count, "Result") %></h1>
-<%= render 'search/form' %>
-
-<br><br>
 
 <div>
-     <table>
-       <thead>
-         <tr>
-           <th><%= sort_link(@query, :title, "Title", default_order: :asc) %></th>
-           <th><%= sort_link(@query, :body, "Post content") %></th>
-           <th><%= sort_link(@query, :body, "User Email") %></th>
-         </tr>
-       </thead>
-
-       <tbody>
-       <% @posts.each do |post| %>
-       <tr>
-          <td><%= link_to post.title, post%></td>
-          <td><%= post.body.truncate_words(25)%></td>
-          <td><%= link_to post.user.email, post%></td>
-     </tr>
-     <% end %>
-       </tbody>
-     </table>
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col">#</th>
+      <th scope="col"><%= sort_link(@query, :title, "Title", default_order: :asc) %></th>
+      <th scope="col"><%= sort_link(@query, :body, "Post content") %></th>
+      <th scope="col"><%= sort_link(@query, :body, "User Email") %></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @posts.each do |post| %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= link_to post.title, post%></td>
+      <td><%= post.body.truncate_words(25)%></td>
+      <td>@<%= link_to post.user.email, post%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>

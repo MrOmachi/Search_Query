@@ -1,14 +1,7 @@
 <p style="color: green"><%= notice %></p>
-
-<%= link_to 'Go Homepage', root_path %>
-<h3>Posts</h3>
-
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
   <% end %>
 </div>
 

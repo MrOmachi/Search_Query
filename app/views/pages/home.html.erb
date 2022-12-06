@@ -1,11 +1,8 @@
 <h1>Welcome to the hompage <%= current_user.email if current_user %></h1>
 
-<% if current_user %>
-  <%= link_to 'View all posts', posts_path %>
-  <br><br>
-  <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-<% else %>
+<% if !current_user %>
 <%= link_to "Sign Up", new_user_registration_path %>
-  <br><br>
-  <%= link_to "Login", new_user_session_path %>
+<br><br>
+<%= link_to "Login", new_user_session_path %>
 <% end %>
+

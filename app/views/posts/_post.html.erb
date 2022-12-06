@@ -1,14 +1,20 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-    <h4> Posted by <%= post.user.email %> </h4>
-    <h5> <%= pluralize(post.views, 'view') %> </h5>
-  </p>
 
-  <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
+
+<div class="card text-center">
+  <div class="card-header">
+    Post
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Post Title: <%= post.title %></h4>
+    <h6> Posted by <%= post.user.email %> </h6>
+    <h6> <%= pluralize(post.views, 'view') %> </h6>
+    <p class="card-text"><%= post.body %></p>
+    <%= link_to "Show this post", post, class:"btn btn-primary" %>
+  </div>
+  <div class="card-footer text-muted">
+    <br>
+  </div>
+</div>
 
 </div>
