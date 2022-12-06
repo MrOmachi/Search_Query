@@ -76,3 +76,5 @@ gem 'devise'
 gem "ransack", "~> 3.2"
 
 gem "bullet", "~> 7.0"
+
+gem 'active_analytics'
