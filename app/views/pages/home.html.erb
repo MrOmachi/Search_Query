@@ -1,8 +1,11 @@
-<h1>Welcome to the Helpjuice, Login to view and search Posts <%= current_user.email if current_user %></h1>
 
 <% if !current_user %>
+<h1>Welcome to the Helpjuice, Login to view and search Posts </h1>
 <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
 <br><br>
 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-secondary" %>
+<% else %>
+<h1>Welcome to the Helpjuice, Search Post or Click post to view all available post </h1>
 <% end %>
+
 
