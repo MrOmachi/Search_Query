@@ -13,6 +13,6 @@ class SearchController < ApplicationController
   end
 
   def show 
-    @searchs = Search.all
+    @searchs = Search.includes(:user).all.order(title: :asc)
   end
 end

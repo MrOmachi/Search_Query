@@ -78,3 +78,7 @@ gem "ransack", "~> 3.2"
 gem "bullet", "~> 7.0"
 
 gem 'active_analytics'
+
+group :production do 
+  gem "pg", "~> 1.1"
+end

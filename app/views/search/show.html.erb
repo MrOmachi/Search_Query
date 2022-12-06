@@ -1,4 +1,20 @@
-<% @searchs.includes([:user]).each do |search| %>
-     <h1><%= search.user.email %> </h1>
-     <h4><%= search.title %> </h4>
-<% end %>
+<div>
+     <table class="table">
+  <thead>
+    <tr>
+    <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col"> Search word </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @searchs.includes([:user]).each do |search| %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= search.user.email%></td>
+      <td><%= search.title%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
