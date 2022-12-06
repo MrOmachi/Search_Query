@@ -5,7 +5,12 @@
 <br><br>
 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-secondary" %>
 <% else %>
-<h1>Welcome to the Helpjuice, Search Post or Click post to view all available post </h1>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>
+<h1>Welcome to the Helpjuice, Search Post </h1>
 <% end %>
 
 
