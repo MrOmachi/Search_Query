@@ -1,4 +1,4 @@
-<% @searchs.each do |search| %>
+<% @searchs.includes([:user]).each do |search| %>
      <h1><%= search.user.email %> </h1>
      <h4><%= search.title %> </h4>
 <% end %>

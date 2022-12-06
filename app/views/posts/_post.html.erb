@@ -10,7 +10,7 @@
     <h6> Posted by <%= post.user.email %> </h6>
     <h6> <%= pluralize(post.views, 'view') %> </h6>
     <p class="card-text"><%= post.body %></p>
-    <%= link_to "Show this post", post, class:"btn btn-primary" %>
+    <%= link_to "Show this post", post, class:"btn btn-primary" if posts_path %>
   </div>
   <div class="card-footer text-muted">
     <br>

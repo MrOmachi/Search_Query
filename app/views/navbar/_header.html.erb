@@ -10,7 +10,7 @@
           <%= link_to 'Posts', posts_path, class:"nav-link active text-white" %> 
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Admin Login</a>
+        <%= link_to 'Analytics', search_show_path, class:"nav-link active text-white" %>
         </li>
       </ul>
       <%= render 'search/form' if current_user%>
