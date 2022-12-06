@@ -81,4 +81,5 @@ gem 'active_analytics'
 
 group :production do 
   gem "pg", "~> 1.1"
+  gem "rails_12factor"
 end
